@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js" type="module"></script>
     <title>Homepage | MadiAid</title>
 </head>
 
@@ -15,12 +17,12 @@
         <div class="logo">MadiAid</div>
         <nav class="nav-bar">
             <ul class="nav-bar-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Log in</a></li>
-                <li><a class="sign-up" href="#">Sign Up</a></li>
+                <li><a href="#">Tarifs</a></li>
+                <li><a href="#">Connexion</a></li>
+                <li><a class="sign-up" href="#">Inscription</a></li>
             </ul>
         </nav>
     </header>
@@ -29,22 +31,212 @@
         <section class="hero-sec">
             <div class="hero-card">
                 <h1 class="card__title">
-                    <span>Providing</span>
-                    <span>Best Medical</span>
-                    <span>Care</span>
+                    <span>Offrir</span>
+                    <span>les meilleurs soins</span>
+                    <span>médicaux</span>
                 </h1>
-                <p class="card__text">HealthCare discovery activity tracking disinfection medicare psychology wearables
-                    heart bones,</p>
+                <p class="card__text">Découverte en santé Suivi d’activité Désinfection Psychologie Accessoires connectés Santé du cœur et des os</p>
                 <div class="card__btns">
-                    <a href="#">Get Started</a>
-                    <a href="">watch Demo</a>
+                    <a href="#">Commencer</a>
+                    <a href=""><img src="icons/play-circle.svg" alt="icon play"> Voir la démo</a>
                 </div>
             </div>
             <div class="hero__img"></div>
+            <model-viewer src="imgs/lemming_of_care_of_puggo.glb" alt="jouet decoratif" auto-rotate rotation-per-second="15deg"
+                camera-controls  shadow-intensity="0" transparent class="floating-3d-joy"></model-viewer>
+
+        </section>
+        <section class="category-sec">
+            <div class="category-head">
+                <h2 class="category__title">Explorer par <span>catégorie</span></h2>
+                <div class="category-btns">
+                    <button><span class="material-symbols-outlined">chevron_left</span></button>
+                    <button><span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="card">
+                    <i class="ph ph-hospital"><img src="icons/hospital.svg" alt="icon hospital"></i>
+                    <h4 class="card__title">Trouver un médecin</h4>
+                    <p class="card__text">
+                        Mmédicaments, assistant intelligent en temps réel.
+                    </p>
+                    <button class="btn card__action">Trouver plus</button>
+                </div>
+                <div class="card">
+                    <i class="ph ph-ambulance"><img src="icons/ambulance.svg" alt="icon ambulance"></i>
+                    <h4 class="card__title">Soins d’urgence </h4>
+                    <p class="card__text">
+                        Medcine migrane eyedrops is decision marking real-time smart assistant
+                    </p>
+                    <button class="btn card__action">Trouver plus</button>
+                </div>
+                <div class="card">
+                    <i class="ph ph-hand-heart"><img src="icons/hand-heart.svg" alt="icon heart"></i>
+                    <h4 class="card__title">Soins contre le cancer</h4>
+                    <p class="card__text">
+                        Medcine migrane eyedrops is decision marking real-time smart assistant
+                    </p>
+                    <button class="btn card__action">Trouver plus</button>
+                </div>
+            </div>
+        </section>
+        <section class="about-us-sec">
+            <div class="about-us__img">
+                <img src="imgs/Medical research-rafiki.svg" alt="research image">
+            </div>
+            <div class="about-us-card">
+                <p class="about-us__pretext">À propos</p>
+                <h3 class="about-us__title"><span>Nous prenons soin de vous </span>proches de votre cœur</h3>
+                <p class="about-us-text">fertilité, échographie, obésité, diabète, paraplégie, accidents, bien-être, analyse ADN, neurostimulation, reins, produits chimiques médicaux, soins dentaires, optique.</p>
+                <div class="about-us-elts">
+                    <div>
+                        <span><img src="icons/hand-heart tiny.svg" alt=""></span>
+                        <p> confort</p>
+                    </div>
+                    <div>
+                        <span><img src="icons/stethoscope.svg" alt=""></span>
+                        <p>équipements modernes</p>
+                    </div>
+                    <div>
+                        <span><img src="icons/clock.svg" alt=""></span>
+                        <p>assistance 24/7</p>
+                    </div>
+                    <div>
+                        <span><img src="icons/medal.svg" alt=""></span>
+                        <p>spécialistes de confiance.</p>
+                    </div>
+                </div>
+                <a class="btn about-us__action" href="#">Lire plus</a>
+            </div>
+        </section>
+
+        <section class="specialistes-sec">
+            <p class="specialistes__pretext">Notre équipe</p>
+            <h2 class="specialistes__title">Nos <span>Specialistes</span> Doctors</h2>
+            <div class="specialistes-card">
+                <div class="card card-specialiste">
+                    <div><img src="imgs/med1png.webp" loading="lazy" alt="image doctor thoms"></div>
+                    <h4 class="specialiste__name">Thoms Jack</h4>
+                    <p class="specialiste__function">Orthopédie</p>
+                </div>
+                <div class="card card-specialiste">
+                    <div><img src="imgs/med2png.webp" loading="lazy" alt="image doctor jane"></div>
+                    <h4 class="specialiste__name">Jane Regina</h4>
+                    <p class="specialiste__function">Chirurgie</p>
+                </div>
+                <div class="card card-specialiste">
+                    <div><img src="imgs/med3.webp" loading="lazy" alt="image doctor Michel"></div>
+                    <h4 class="specialiste__name">Michel Kruse</h4>
+                    <p class="specialiste__function">Dentisterie</p>
+                </div>
+            </div>
+            <div class="statistiques">
+                <div>
+                    <span>1200+</span>
+                    <p>patients satisfaits</p>
+                </div>
+                <div>
+                    <span>200</span>
+                    <p>médecins spécialistes</p>
+                </div>
+                <div>
+                    <span>20</span>
+                    <p>ans d’expérience</p>
+                </div>
+                <div>
+                    <span>150</span>
+                    <p>cabines</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-sec">
+            <div class="trust__img">
+                <img src="imgs/Doctors-rafiki.webp" loading ="lazy"  alt="image illustration">
+            </div>
+            <div class="trust-card">
+                <h2 class="trust__title">We Believe in a <span>Healthier</span>You</h2>
+                <p class="trust__text">Long tail monetization strategy network effects deployment incubator MVP supply
+                    chain assets infrastructure. Ownership business model canvas accelerator.<br><br>
+                    Epsilon vector x therapeutic, treatment: pre-performance trauma agile x-factor. Scientific 11-scale.
+                </p>
+                <a class="trust__action" href="#">Get Started</a>
+            </div>
+        </section>
+
+        <section class="testimonials-sec">
+            <div class="testimonials__img">
+                <div class="testimonials-container-img">
+                    <img src="imgs/testimonial-img.webp" loading="lazy" alt="illustration">
+                </div>
+                <div class="container-img-shape"></div>
+                <div class="container-img-shape"></div>
+                <div class="container-img-shape"></div>
+            </div>
+            <div class="testimonials-group">
+                <span class="testimonials-quotes quote-mark">&ldquo;</span>
+                <div class="testimonials-card">
+                    <p class="testimonials__pretext">Testimonial</p>
+                    <h3 class="testimonials__title">They are very helpful</h3>
+                    <p class="testimonials__text">Chrons implants blood anesthetics vision x-rays-life ebola health
+                        wellness. Trauma mobile health neurostimulation testing pregnancy therapy incision diarrhea
+                        migraine blood DNA analysis wellness clinic stethoscope. X-ray outcome abdomen</p>
+                    <p class="testimonials-name">Aysa Eva</p>
+                    <div class="testimonials-btns">
+                        <button><span class="material-symbols-outlined">arrow_left_alt</span></button>
+                        <button><span class="material-symbols-outlined">arrow_right_alt</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="appointment-sec">
+            <div class="appointment-card">
+                <h2 class="appointment__title">Réservez un rendez-vous dès aujourd’hui</h2>
+                <a class="appointment-btn" href="#">Réserver</a>
+            </div>
         </section>
     </main>
+
     <footer>
-        
+        <div class="make-appointment">
+            <span>MaidiAid</span>
+            <p>Services disponibles : identité scientifique, consultation, soins d’urgence, radiographie, clinique.</p>
+            <a href="#">Make Appointment</a>
+        </div>
+
+        <div class="departments">
+            <h4>Departements</h4>
+            <p>Tests de la fonction hépatique</p>
+            <p>Tests de la thyroïde</p>
+            <p>Ponction lombaire</p>
+            <p>Tests de la fonction rénale</p>
+            <p>Tests de la thyroïde</p>
+        </div>
+
+        <div class="links">
+            <h4>Liens rapides</h4>
+            <a href="#">À propos</a>
+            <a href="#">Our Blog</a>
+            <a href="#">Privacy & Terms</a>
+            <a href="#">Appointment</a>
+        </div>
+
+        <div class="quick-contact">
+            <h4>Quick contact</h4>
+            <p>If you have any questions or need help, feel free to contact us for medical assistance.</p>
+            <a href="tel:877-60-4334">877-60-4334</a>
+            <address>2020 Brooklyn Place, Ny 11206, United States</address>
+            <div>
+                <a href="#">Get direction</a>
+                <div class="social-networks">
+                    <img src="icons/facebook-logo.svg" alt="icon facebook">
+                    <img src="icons/x-logo.svg" alt=" icon x">
+                    <img src="icons/instagram-logo.svg" alt="icon instagram">
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
