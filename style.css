@@ -13,7 +13,8 @@
   --light-gray-bg: #f4f6f8;
   --text-gray: #3a3a3a;
   --pure-white: #ffffff;
-
+    /*animations*/
+    --header-after-width: 0;
   /*text colors*/
   --text-color: var(--text-gray);
   --text-inverse-color: var(--primary-cyan);
@@ -85,6 +86,15 @@ header{
     background-color: var(--hero-bg-color);
     z-index: 1;
 
+}
+header::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--header-after-width);
+    height: 4px;
+    background-color: var(--primary-cyan);
 }
 main{
     width: 100%;
@@ -349,6 +359,7 @@ box-shadow: var(--box-shadow);
     gap: var(--space-3);
     align-items: stretch;
     background-color: var(--hero-bg-color);
+    width: 80%;
 }
 .card-specialiste{
     background-color: var(--primary-purple);
@@ -606,12 +617,17 @@ box-shadow: var(--box-shadow);
     opacity: .8;
 }
 footer{
-    gap: var(--space-2);
-    grid-area: footer;
-    display: flex;
-    padding: var(--space-2) var(--space-1);
     background-color: var(--dark-navy);
+    grid-area: footer;
+    padding: var(--space-2) var(--space-1);
     color: var(--pure-white);
+}
+footer > p{
+    text-align: center;
+}
+.footer-container{
+    gap: var(--space-2);
+    display: flex;
     align-items: stretch;
 }
 .make-appointment{
