@@ -22,7 +22,7 @@
                 <li><a href="#"><img src="icons/user.svg" alt="contact icon">Contact</a></li>
                 <li><a href="#"><img src="icons/icons8-pricing-24.png" alt="pricing icon">Tarifs</a></li>
                 <li><a href="#"><img src="icons/icons8-login-24.png" alt="login icon">Connexion</a></li>
-                <li class="sign-up"><a  href="#">Inscription</a></li>
+                <li class="sign-up"><a href="#">Inscription</a></li>
             </ul>
         </nav>
         <div class="menu-hamburger">
@@ -86,7 +86,7 @@
                         Médicaments pour la migraine et collyres, avec prise de décision en temps réel grâce à un
                         assistant intelligent.
                     </p>
-                    <a href="#"  class="btn card__action">Trouver plus</a>
+                    <a href="#" class="btn card__action">Trouver plus</a>
                 </div>
             </div>
         </section>
@@ -126,17 +126,17 @@
             <h2 class="specialistes__title">Nos <span>Spécialistes</span> </h2>
             <div class="specialistes-card">
                 <div class="card card-specialiste">
-                    <div><img src="imgs/med1png.webp" loading="lazy" alt="image doctor thoms"></div>
+                    <div><img src="imgs/med1png.webp" loading="lazy" width="150px" height="150px" alt="image doctor thoms"></div>
                     <h4 class="specialiste__name">Thoms Jack</h4>
                     <p class="specialiste__function">Orthopédiste</p>
                 </div>
                 <div class="card card-specialiste">
-                    <div><img src="imgs/med2png.webp" loading="lazy" alt="image doctor jane"></div>
+                    <div><img src="imgs/med2png.webp" loading="lazy" width="150px" height="150px" alt="image doctor jane"></div>
                     <h4 class="specialiste__name">Jane Regina</h4>
                     <p class="specialiste__function">Chirurgien</p>
                 </div>
                 <div class="card card-specialiste">
-                    <div><img src="imgs/med3.webp" loading="lazy" alt="image doctor Michel"></div>
+                    <div><img src="imgs/med3.webp" loading="lazy" width="150px" height="150px" alt="image doctor Michel"></div>
                     <h4 class="specialiste__name">Michel Kruse</h4>
                     <p class="specialiste__function"> Dentiste</p>
                 </div>
@@ -213,68 +213,75 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-container">
-        <div class="make-appointment">
-            <span>CarePlus</span>
-            <p>Services disponibles : identité scientifique consultation soins d’urgence radiographie clinique.</p>
-            <a href="#">Prendre rendez-vous</a>
-        </div>
+   <footer>
+            <div class="make-appointment">
+                <span>CarePlus</span>
+                <p>Services disponibles : identité scientifique consultation soins d’urgence radiographie clinique.</p>
+                <a href="#">Prendre rendez-vous</a>
+            </div>
 
-        <div class="departments">
-            <h4>Départements</h4>
-            <p>Tests de la fonction hépatique</p>
-            <p>Tests de la thyroïde</p>
-            <p>Ponction lombaire</p>
-            <p>Tests de la fonction rénale</p>
-            <p>Tests de la thyroïde</p>
-        </div>
+            <div class="departments">
+                <h4>Départements</h4>
+                <p>Tests de la fonction hépatique</p>
+                <p>Tests de la thyroïde</p>
+                <p>Ponction lombaire</p>
+                <p>Tests de la fonction rénale</p>
+                <p>Tests de la thyroïde</p>
+            </div>
 
-        <div class="links">
-            <h4>Liens rapides</h4>
-            <a href="#">À propos</a>
-            <a href="#">Blog</a>
-            <a href="#">Politique & Conditions</a>
-            <a href="#">Rendez-vous</a>
-        </div>
+            <div class="links">
+                <h4>Liens rapides</h4>
+                <a href="#">À propos</a>
+                <a href="#">Blog</a>
+                <a href="#">Politique & Conditions</a>
+                <a href="#">Rendez-vous</a>
+            </div>
 
-        <div class="quick-contact">
-            <h4>Contact rapide</h4>
-            <p>Si vous avez des questions ou besoin d’aide, n’hésitez pas à nous contacter pour une assistance médicale.</p>
-            <a href="tel:877-60-4334">877-60-4334</a>
-            <address>2020 Brooklyn Place, Ny 11206, United States</address>
-            <div>
-                <a href="#">Get direction</a>
-                <div class="social-networks">
-                    <img src="icons/facebook-logo.svg" alt="icon facebook">
-                    <img src="icons/x-logo.svg" alt=" icon x">
-                    <img src="icons/instagram-logo.svg" alt="icon instagram">
+            <div class="quick-contact">
+                <h4>Contact rapide</h4>
+                <p>Si vous avez des questions ou besoin d’aide, n’hésitez pas à nous contacter pour une assistance
+                    médicale.</p>
+                <a href="tel:877-60-4334">877-60-4334</a>
+                <address>2020 Brooklyn Place, Ny 11206, United States</address>
+                <div>
+                    <a href="#">Get direction</a>
+                    <div class="social-networks">
+                        <img src="icons/facebook-logo.svg" alt="icon facebook">
+                        <img src="icons/x-logo.svg" alt=" icon x">
+                        <img src="icons/instagram-logo.svg" alt="icon instagram">
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
         <p>&copy; 2026 <a href="https://jordantiobou.vercel.app" target="_blank">JordanDev</a> tous droits réservés</p>
     </footer>
 
 
     <script type="module">
-        /*animation de la progressBar*/
+        //animation de la progressBar
         window.addEventListener("scroll", () => {
-           const header =  document.querySelector("header");
-           const hauteurTotale = document.documentElement.scrollHeight - window.innerHeight;
-           const pourcentage = (window.scrollY / hauteurTotale) * 100;
-           header.style.setProperty('--header-after-width', `${pourcentage}%`)
+            const header = document.querySelector("header");
+            const hauteurTotale = document.documentElement.scrollHeight - window.innerHeight;
+            const pourcentage = (window.scrollY / hauteurTotale) * 100;
+            header.style.setProperty('--header-after-width', `${pourcentage}%`)
         })
-        
-        /*affichage de la navbar en mode mobile*/
+
+        //affichage de la navbar en mode mobile
         const fstBar = document.querySelector('.fst-bar');
         const lstBar = document.querySelector('.lst-bar');
         const menuHamburger = document.querySelector('.menu-hamburger');
         const navBar = document.querySelector('.nav-bar');
-        menuHamburger.addEventListener('click', () =>{
+        menuHamburger.addEventListener('click', () => {
             navBar.classList.toggle("navBarActive")
             fstBar.classList.toggle("fstBar")
             lstBar.classList.toggle("lstBar")
+        })
+        navBar.addEventListener("click", (e) =>{
+            if(e.target.closest('a').tagName ===  'A'){
+            console.log(e.target)
+            navBar.classList.toggle("navBarActive")
+            fstBar.classList.toggle("fstBar")
+            lstBar.classList.toggle("lstBar")              
+            }
         })
     </script>
 </body>
