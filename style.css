@@ -267,7 +267,7 @@ main {
   align-items: center;
   justify-content: right;
   padding: var(--space-2);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 .category__title {
   position: absolute;
@@ -541,11 +541,8 @@ main {
   justify-content: center;
   width: 100%;
 }
-.testimonials__img {
+.testimonials__img{
   position: relative;
-  position: relative;
-  overflow: visible; 
-  isolation: isolate; 
 }
 .testimonials__img div {
   height: var(--space-20);
@@ -982,15 +979,16 @@ footer > p a {
     scrollbar-width: none;
     gap: var(--space-1);
     align-items: normal;
-    max-width: 100%;
     scroll-behavior: smooth;
     mask-image: linear-gradient(to right, transparent 0%, white 10%, white 90%, transparent 100%);
+    padding: var(--space-1);
   }
 
   .category-sec{
-    overflow-x: hidden;
+    width: 100%;
   }
   .category-head{
+    width: 100%;
     justify-content: space-between;
   }
   .category__title{
@@ -1001,7 +999,6 @@ footer > p a {
     left: initial;
   }
   .card{
-    flex: auto;
     min-width: 90%;
   }
 
@@ -1025,11 +1022,13 @@ footer > p a {
     object-fit: contain;
   }
   .statistiques{
-    width: 90%;
+    padding: var(--space-1);
+    width: 100%;
     min-width: 80%;
   }
   .statistiques div span{
     font-size: var(--font-size-md);
+    font-weight: 400;
   }
   .statistiques div p{
     white-space: nowrap;
@@ -1056,12 +1055,16 @@ footer > p a {
     flex-direction: column;
     padding: var(--space-3);
     height: fit-content;
+    width: 100%;
   }
   .testimonials-group{
-    width: calc(var(--space-16) * 3);
-    max-width: 90%;
+    width: 90%;
+    max-width: calc(var(--space-16) * 3);
   }
-    footer{
+  .testimonials-card{
+    width: 100%;
+  }
+  footer{
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
@@ -1072,9 +1075,6 @@ footer > p a {
     flex-grow: initial;
     max-width: 70%;
     flex: auto;
-  }
-  body{
-    font-size: .9rem;
   }
 
 }
