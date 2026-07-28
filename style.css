@@ -468,6 +468,7 @@ main {
   padding: var(--space-2) var(--space-3);
   background-color: var(--pure-white);
   translate: 0 calc(var(--space-2) + 50%); /* + var(--space-2) du padding*/
+  justify-content: center;
 }
 .statistiques div {
   display: flex;
@@ -733,17 +734,18 @@ footer {
   color: var(--pure-white);
   width: 100%;
   gap: var(--space-2);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 footer > p {
   text-align: center;
+  grid-column: span 4;
 }
 footer > p a {
   color: var(--pure-white);
   text-decoration: underline;
 }
 .make-appointment {
-  flex: 1;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -759,7 +761,6 @@ footer > p a {
   text-decoration: underline;
 }
 .departments {
-  flex: 1;
   display: flex;
   flex-direction: column;
   width: max-content;
@@ -768,7 +769,6 @@ footer > p a {
 .links {
   display: flex;
   flex-direction: column;
-  flex: 1;
   gap: var(--space-2);
 }
 .links a {
@@ -785,7 +785,6 @@ footer > p a {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  flex: 1;
 }
 .quick-contact div {
   display: flex;
@@ -818,7 +817,7 @@ footer > p a {
     justify-content: space-between;
   }
   .logo{
-    z-index: 1;
+    z-index: 3;
   }
   .nav-bar {
     top: 0;
@@ -830,6 +829,7 @@ footer > p a {
     backdrop-filter: blur(18px);
     left: 100%;
     transition: left .2s ease-out;
+    z-index: 2;
   }
   .navBarActive {
     left: 0;
@@ -889,6 +889,7 @@ footer > p a {
     gap: 8px;
     flex-direction: column;
     cursor: pointer;
+    z-index: 4;
   }
   .fst-bar {
     width: 20px;
@@ -935,20 +936,55 @@ footer > p a {
     margin-top: 0;
   }
   .hero-card{
+    height: 100dvh;
     margin-top: 0;
     flex-grow: 1;
     flex: auto;
     max-width: 80%;
     align-items: center;
   }
+  .hero-card::after{
+    content: '';
+    position: absolute;
+    bottom: var(--space-3);
+    left: 50%;
+    height: var(--space-1);
+    width: var(--space-3);
+    background-color: var(--primary-yellow);
+    translate: -50% 0;
+    clip-path: polygon(100% 0, 100% 55%, 50% 100%, 0 55%, 0 0, 50% 40%);
+    animation: opacityArrow 1s infinite;
+  }
+    .hero-card::before{
+    content: '';
+    position: absolute;
+    bottom: var(--space-4);
+    left: 50%;
+    height: var(--space-1);
+    width: var(--space-3);
+    background-color: var(--primary-yellow);
+    translate: -50% 0;
+    clip-path: polygon(100% 0, 100% 55%, 50% 100%, 0 55%, 0 0, 50% 40%);
+    animation: opacityArrow 1s infinite .2s;
+  }
+/*animatio des fleches*/
+@keyframes opacityArrow {
+  0%, 100%{opacity: 1;}
+  50%{opacity: .3;}
+}
+
   /*section category pour mobile*/
   .category-card{
+    position: relative;
     overflow-x: auto;
     scrollbar-width: none;
     gap: var(--space-1);
     align-items: normal;
-    min-width: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    mask-image: linear-gradient(to right, transparent 0%, white 10%, white 90%, transparent 100%);
   }
+
   .category-sec{
     overflow-x: hidden;
   }
@@ -969,18 +1005,17 @@ footer > p a {
     width: 100%;
     align-items: center;
   }
-  .card-specialiste{
-    flex: 0;
-    max-height: 300px;
-    max-width: 80%;
-    overflow: hidden;
-  }
+
   .card-specialiste div{
     width: 100%;
   }
+  .card-specialiste div img{
+    object-fit: contain;
+  }
   .statistiques{
     flex: auto;
-    width: 80%;
+    width: 90%;
+    min-width: 80%;
   }
   .statistiques div span{
     font-size: var(--font-size-md);
@@ -1019,6 +1054,7 @@ footer > p a {
     max-width: calc(var(--space-16) * 3);;
   }
     footer{
+    display: flex;
     width: 100%;
     flex-direction: column;
     gap: var(--space-4);
