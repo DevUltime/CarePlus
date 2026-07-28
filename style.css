@@ -876,9 +876,11 @@ footer > p a {
   }
   .sign-up {
     background-color: var(--primary-yellow);
-    width: 100%;
+    max-width: 90%;
     position: absolute;
-    bottom: var(--space-3);
+    left: 50%;
+    translate: -50% 0;
+    bottom: var(--space-5);
     border-radius: var(--border-radius);
   }
   .sign-up:hover {
@@ -946,7 +948,7 @@ footer > p a {
   .hero-card::after{
     content: '';
     position: absolute;
-    bottom: var(--space-3);
+    bottom: var(--space-7);
     left: 50%;
     height: var(--space-1);
     width: var(--space-3);
@@ -958,7 +960,7 @@ footer > p a {
     .hero-card::before{
     content: '';
     position: absolute;
-    bottom: var(--space-4);
+    bottom: var(--space-8);
     left: 50%;
     height: var(--space-1);
     width: var(--space-3);
@@ -988,6 +990,16 @@ footer > p a {
   .category-sec{
     overflow-x: hidden;
   }
+  .category-head{
+    justify-content: space-between;
+  }
+  .category__title{
+    position: relative;
+    white-space: nowrap;
+    translate: 0 0;
+    top: initial;
+    left: initial;
+  }
   .card{
     flex: auto;
     min-width: 90%;
@@ -1014,7 +1026,7 @@ footer > p a {
   }
   .statistiques{
     flex: auto;
-    width: 90%;
+    width: 100%;
     min-width: 80%;
   }
   .statistiques div span{
@@ -1060,6 +1072,7 @@ footer > p a {
     gap: var(--space-4);
     overflow-x: hidden;
     align-items: normal;
+
   }
   footer > div{
     flex-grow: initial;
