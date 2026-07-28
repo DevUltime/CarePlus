@@ -948,7 +948,7 @@ footer > p a {
   .hero-card::after{
     content: '';
     position: absolute;
-    bottom: var(--space-7);
+    bottom: var(--space-16);
     left: 50%;
     height: var(--space-1);
     width: var(--space-3);
@@ -960,7 +960,7 @@ footer > p a {
     .hero-card::before{
     content: '';
     position: absolute;
-    bottom: var(--space-8);
+    bottom: calc(var(--space-16) - 8px);
     left: 50%;
     height: var(--space-1);
     width: var(--space-3);
@@ -1025,16 +1025,13 @@ footer > p a {
     object-fit: contain;
   }
   .statistiques{
-    flex: auto;
-    width: 100%;
+    width: 90%;
     min-width: 80%;
   }
   .statistiques div span{
     font-size: var(--font-size-md);
   }
   .statistiques div p{
-    display: flex;
-    flex-shrink: 1;
     white-space: nowrap;
     font-size: var(--font-size-xs);
   }
@@ -1043,7 +1040,6 @@ footer > p a {
   }
   .appointment-card{
     width: 90%;
-    max-width: calc(var(--space-16) * 4);
   }
   .trust-sec{
     justify-content: center;
@@ -1062,23 +1058,23 @@ footer > p a {
     height: fit-content;
   }
   .testimonials-card{
-    width: 90%;
-    max-width: calc(var(--space-16) * 3);;
+    width: calc(var(--space-16) * 3);
+    max-width: 90%;
   }
     footer{
     display: flex;
-    width: 100%;
     flex-direction: column;
     gap: var(--space-4);
     overflow-x: hidden;
-    align-items: normal;
 
   }
   footer > div{
     flex-grow: initial;
     max-width: 70%;
-    width: max-content;
     flex: auto;
+  }
+  body,html{
+    overflow-x: hidden;
   }
 
 }
